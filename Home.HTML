@@ -13,7 +13,7 @@
 <body>
 	<nav class="navbar navbar-expand-sm bg-light navbar-light">
 		<a href="Home.HTML" class="navbar-brand">
-			<img src="img/Quest.png" style="height: 50px" alt="Qwest Logo">
+			<img src="img/Quest.png" style="height: 50px;" alt="Qwest Logo">
 		</a>
 		<button class="navbar-toggler" data-toggle="collapse" data-target="#bs4Nav">
 			<span class="navbar-toggler-icon"></span>
@@ -35,13 +35,13 @@
         </ul>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="img/1.png" alt="png" style="height: 200px;">
+                <img src="img/1.png" alt="png" style="height: 400px; width: 100%;">
             </div>
             <div class="carousel-item">
-                <img src="img/2.png" alt="2.png" style="height: 200px;">
+                <img src="img/2.png" alt="2.png" style="height: 400px; width: 100%;">
             </div>
             <div class="carousel-item">
-                <img src="img/Q.png" alt="Q.png" style="height: 200px;">
+                <img src="img/Q.png" alt="Q.png" style="height: 400px; width: 100%;">
             </div>
          </div>
             <a class="carousel-control-prev " href="#demo" data-slide="prev">
@@ -99,7 +99,7 @@
     </td></tr>
 </tbody>
 <tr><td class="text-center" >
-    <button type="submit" class="btn btn-success">Subscribe here</button>
+    <button type="button" data-toggle="modal" data-target="#services_Subscribe" class="btn btn-outline-primary">Subscribe here</button>
 </td></tr>
 </table>
 </div>
@@ -107,6 +107,79 @@
 </div>
 </div>
 
+<!-- ===========Modal Subscribe start============ -->
+
+ <div class="modal fade" data-backdrop="static" role="dialog" id="services_Subscribe">
+   <div class="modal-dialog modal-dialog-scrollable">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h3 class="modal-title">Subscribe to our Services!</h3>
+         <button class="close" data-dismiss="modal">&times;</button>
+       </div>
+       <div class="modal-body">
+        <form class="" action="index.html" method="post">
+          <div class="form-group">
+            <label>Your Name</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fa fa-user-o"></i>
+                </span>
+              </div>
+              <input type="text" name="" value="" class="form-control" placeholder="Enteryour name...">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Your Name</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fa fa-envelope-o"></i>
+                </span>
+              </div>
+              <input type="text" name="" value="" class="form-control" placeholder="Enteryour email...">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Brief description of product</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fa fa-pencil"></i>
+                </span>
+              </div>
+              <textarea  name="" rows="4" value="" class="form-control" placeholder="Enteryour name..."></textarea>
+            </div>
+          </div>
+          <div class="form-group text-center">
+            <button type="button"class="btn btn-primary">
+              Subscibe <i></i>
+            </button>
+          </div>
+        </form>
+       </div>
+       <div class="modal-footer">
+         <button type="button"class="btn btn-danger" data-dismiss="modal">Close</button>
+       </div>
+     </div>
+   </div>
+ </div>
+
+ <script type="text/javascript">
+   $(document).ready(function(){
+     $('#services_Subscribe form button').click(function(){
+       $(this).children('i')
+       .addClass('spinner spinner-border spinner-border-sm')
+       .wait(3000)
+       .removeClass('spinner spinner-border spinner-sm')
+       .addClass('fa fa-check')
+       .wait(2000)
+       .removeClass('fa fa-check');
+     });
+   });
+ </script>
+
+<!-- ===========Modal Subscribe End============ -->
 <div class="container-fluid bg-primary">
     <div class="text-center">
         <button type="button" class="btn btn-success m-2">Register</button>
